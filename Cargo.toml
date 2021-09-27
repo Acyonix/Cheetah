@@ -5,7 +5,7 @@ edition = "2018"
 
 [lib]
 name="cheetah"
-path="src/cheetah.rs"
+path="src/cheetah/cheetah.rs"
 
 [[bin]]
 name="sandbox"
