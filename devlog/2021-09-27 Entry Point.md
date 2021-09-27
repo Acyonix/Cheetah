@@ -36,4 +36,9 @@ To me, this feels a bit strange. I can't exactly explain why, but I'll describe 
 
 To start off with, I'll try keeping the `main()` method within the Sandbox. When a user wants to create a new application, they create a new `Application` object, which will be the overarching object that contains all of the state of the application, along with configuration options.
 
-Now, the State of the game consists of mainly two things: a list of Scenes which connect to each other, and the current Scene that is in effect.
+Ok, so the architecture so far looks like this:
+
+- When creating a game, an `Application` object from the `cheetah::core` module is made.
+- This `Application` object contains two things so far: A list of `Scene`s that exist in the game, and a reference to the current `Scene` that is in effect.
+  - As an aside, this lead to me learning about the Vector type and the Rc<> type in Rust, both useful to store a list of references to `Scene`s
+- I'm actually considering making the `active_scene` object a standalone object rather than a reference, so that a `Scene` may be copied and used over, say, multiple levels. This will probably be a change in the near future, if not today. In this case the `scenes` list will simply contain a list of _template_ `Scene`s that will be used to create new objects with their own state in runtime, as defined by the game code.
