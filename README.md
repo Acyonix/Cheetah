@@ -8,8 +8,8 @@ Any suggested improvements are more than welcome, feel free to leave issues or s
 
 ## Development
 
-Currently, this is a rather simple Cargo project. You should be able to simply clone this repo, then `cd` into the project folder and run `cargo run` to get it going.
+This is a rather simple Cargo project. You should be able to simply clone this repo, then `cd` into the project folder and run `cargo run` to get it going.
 
 ## Implemented Features
 
-As of yet, there are no features that are actually implemented in this project. It is still just a Hello World project.
+As of yet, there are no features that are actually implemented in this project. It's basically still at the Hello World part
